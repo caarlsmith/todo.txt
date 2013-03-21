@@ -1,12 +1,13 @@
 package org.cssquare.todo;
 import org.cssquare.todo.*;
+import java.util.*;
 
 public class CommandHandler{
 
 	//Dispatching commands
-	String[] args;
-	String dispatch;
-	String define;
+	static String[] args;
+	static String dispatch;
+	static String define;
 
 	public static void dispatch(String[] argsIn, ArrayList<Task> taskList){
 		if (argsIn.length < 1){
@@ -56,10 +57,10 @@ public class CommandHandler{
 	}
 
 	public static CommandResult delete(ArrayList<Task> taskList, int pos){
-		.get()
+		//.get()
 
-		if (pos )
-			throw new Exception("Not found");
+		//if (pos )
+		//	throw new Exception("Not found");
 	}
 
 	public static CommandResult list(ArrayList<Task> taskList){
@@ -67,7 +68,7 @@ public class CommandHandler{
 		for(Task t : taskList){
 			listedTasks += t + "\n";
 		}
-		return new CommandResult(listedTasks);
+		return new CommandResult("Your list of tasks: ", listedTasks);
 	}
 
 	public static CommandResult prepend(){
