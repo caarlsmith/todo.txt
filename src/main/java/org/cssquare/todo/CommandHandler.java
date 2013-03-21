@@ -57,10 +57,8 @@ public class CommandHandler{
 	}
 
 	public static CommandResult delete(ArrayList<Task> taskList, int pos){
-		//.get()
-
-		//if (pos )
-		//	throw new Exception("Not found");
+		taskList.get(pos).setTask("");
+		return new CommandResult("Successfully deleted", taskList)
 	}
 
 	public static CommandResult list(ArrayList<Task> taskList){
@@ -68,7 +66,7 @@ public class CommandHandler{
 		for(Task t : taskList){
 			listedTasks += t + "\n";
 		}
-		return new CommandResult("Your list of tasks: ", listedTasks);
+		return new CommandResult(listedTasks);
 	}
 
 	public static CommandResult prepend(){
