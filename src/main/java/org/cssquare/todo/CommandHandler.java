@@ -58,7 +58,7 @@ public class CommandHandler{
 
 	public static CommandResult delete(ArrayList<Task> taskList, int pos){
 		taskList.get(pos).setTask("");
-		return new CommandResult("Successfully deleted", taskList)
+		return new CommandResult("Successfully deleted", taskList);
 	}
 
 	public static CommandResult list(ArrayList<Task> taskList){
